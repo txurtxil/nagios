@@ -2,7 +2,7 @@
 
    cd /opt
 
-   git clone https://github.com/txurtxil/nagios/
+   sudo git clone https://github.com/txurtxil/nagios/
    
    sudo docker-compose -p nagios up -d    (nagios es el nombre que le damos al contenedor)
    
