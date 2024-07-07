@@ -6,15 +6,11 @@
    
    sudo docker-compose -p nagios up -d    (nagios es el nombre que le damos al contenedor)
    
-## Parar contenedor Docker Nagios
- sudo docker-compose down
-## Eliminar Docker Nagios
-sudo docker rmi  71c4992638a2 (poner Image ID: sudo docker image ls)
-## Entrar en la Bash shell de docker Nagios
-sudo docker exec -it nagios /bin/bash
-## Reiniciar Nagios (para aplicar cambios, etc)
-sudo docker restart nagios
-# Configurar Nagios
+# Configurar Nagios:
+
+### Entrar en la Shell del volumen Nagios para poder trabajar con los ficheros de configuracion Nagios
+
+    sudo docker exec -it nagios /bin/bash
 
 Hubicacion nagios:
 
@@ -80,9 +76,14 @@ Con este procedimiento ya deberiamos tener monitorizado el primer equipo windows
 
      sudo docker restart  nagios
 
-### Entrar en la Shell del volumen Nagios para poder trabajar con los ficheros de configuracion Nagios
 
-    sudo docker exec -it nagios /bin/bash
+
+
+
+    ## Parar contenedor Docker Nagios
+ sudo docker-compose down
+## Eliminar Docker Nagios
+sudo docker rmi  71c4992638a2 (poner Image ID: sudo docker image ls)
 
 
    
