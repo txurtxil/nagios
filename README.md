@@ -34,21 +34,20 @@
 
 1.Instalar el agente en los hosts Windows a monitorizar, en nuestro caso instalaremos “NSClient++”  x64 a descargar free desde su web:
 
-    1.Generic
-    2.Complete
-    3. IP equipo a monitorizar (copiamos la password) y activar: 
-       Enable check plugins, Enable nsclient server, Enable NRPE server,insecure legacy
+             1.Generic
+             2.Complete
+             3. IP equipo a monitorizar (copiamos la password) y activar: 
+                Enable check plugins, Enable nsclient server, Enable NRPE server,insecure legacy
 
 2. Creamos una carpeta donde alojaremos el fichero .cfg de maquina a monitorzar
 
    mkdir /opt/nagios/etc/objects/equipos
-   cd /opt/nagios/etc/objects/equipos
 
-3. copiamos la plantilla  el fichero /opt/nagios/etc/objects/windows.cfg del equipo a minitorizar:
+3. copiamos la plantilla /opt/nagios/etc/objects/windows.cfg del equipo a minitorizar:
    
     cp /opt/nagios/etc/objects/windows.cfg /opt/nagios/etc/objects/equipos/win01.cfg
    
-   Lo editamos y en  el apartado "define host" poner la direccion IP del equipo a monitorizar
+  Editamos el nuevo fichero win01.cfg y en  el apartado "define host" poner la direccion IP del equipo a monitorizar
 
 4.Editamos el fichero de configuración de nagios:
 
@@ -70,8 +69,8 @@ command_line $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s YPg7gMkLOOne49PB -v $
 
 Con este procedimiento ya deberiamos tener monitorizado el primer equipo windows
 
-## Comandos utiles para tranajar ocn el doquer nagios
-### Reiniciar Ngios para aplicar cambios: 
+## Comandos utiles para tranajar con el docker nagios
+### Reiniciar Nagios para aplicar cambios (desde el equipo host): 
 
      sudo docker restart  nagios
 
