@@ -19,12 +19,22 @@ Hubicacion nagios:
 /opt/nagios/etc ----> Ficheros configuracion
 
 •localhost.cfg: Plantilla de configuración para monitorizar los servicios del propio servidor Nagios.
+
 • hypervisor.cfg: Plantilla de configuración para monitorizar los servicios de las plataformas de virtualización.
+
 • linux.cfg: Plantilla de configuración para monitorizar los servicios de los hosts Linux.
+
 • windows.cfg: Plantilla de configuración para monitorizar los servicios de los hosts Windows.
+
 • netdev.cfg: Plantilla de configuración para monitorizar los servicios de los dispositivos de red.
 
 # Monitorizar Servidor Windows en Nagios
 
-1.
+1.Instalar el agente en los hosts Windows a monitorizar, en nuestro caso instalaremos “NSClient++” 
+
+    (Generic,COmplete y activar las casillas Enable check plugins, Enable nsclient server, Enable NRPE server y insecure legacy)
+
+2. Editamos el fichero de configuración de nagios:
+
+    nano /etc/nagios/nagios.cfg
  
