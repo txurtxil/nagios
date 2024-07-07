@@ -12,13 +12,13 @@
 
     sudo docker exec -it nagios /bin/bash
 
-Ubicacion nagios:
-
-/opt/nagios
-
-/opt/nagios/libexdec ---> scripts
-
-/opt/nagios/etc ----> Ficheros configuracion
+      Ubicacion nagios:
+      
+      /opt/nagios
+      
+      /opt/nagios/libexdec ---> scripts
+      
+      /opt/nagios/etc ----> Ficheros configuracion:
 
          •localhost.cfg: Plantilla de configuración para monitorizar los servicios del propio servidor Nagios.
 
