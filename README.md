@@ -45,6 +45,8 @@ Hubicacion nagios:
 
 4. copiamos la plantilla  el fichero /opt/nagios/etc/objects/windows.cfg del equipo a minitorizar:
     cp /opt/nagios/etc/objects/windows.cfg /opt/nagios/etc/objects/equipos/win01.cfg
+   
+   Lo editamos y en  el apartado "define host" poner la direccion IP del equipo a monitorizar
 
 5.Editamos el fichero de configuración de nagios:
 
@@ -52,5 +54,17 @@ Hubicacion nagios:
     
 Añadimos la línea que especifica el fichero de configuración el equipo windows que vamos a monitorizar
 debajo de la seccion "Definitions for monitoring a Windows machine":
+
         cfg_file=/opt/nagios/etc/objects/equipos/win01.cfg
+        
+6.Editamos el fichero donde se definen los comandos para nagios:
+
+nano /etc/nagios/objects/commands.cfg
+
+En la definición del comando para “check_nt” es donde se situa la comunicacion con el equipo y lleva la passwd generada dirante la instalacion de “NSClient++” 
+, comentamos el que viene por defecto y agregamos el siguiente:
+
+command_line $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s YPg7gMkLOOne49PB -v $ARG1$ $ARG2$
+
+
  
