@@ -24,7 +24,7 @@ Buscar en todo el documento nagiosadmin y cambiarlo por admin y salvarlo
 
 Salir del docker y reinciar nagios
 
-          sudo docker restart  nagios
+          sudo docker restart nagios_nagios_1
 
 
 
@@ -96,7 +96,7 @@ Con este procedimiento ya deberiamos tener monitorizado el primer equipo windows
 ## Comandos utiles para tranajar con el docker nagios
 ### Reiniciar Nagios para aplicar cambios (desde el equipo host): 
 
-     sudo docker restart  nagios
+     sudo docker restart nagios_nagios_1
 
 ## Eliminar Docker Nagios
 
