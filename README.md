@@ -11,10 +11,14 @@ sudo docker restart nagios
 # Configurar Nagios
 
 Hubicacion nagios:
+
 /opt/nagios
+
 /opt/nagios/libexdec ---> scripts
+
 /opt/nagios/etc ----> Ficheros configuracion
-  localhost.cfg: Plantilla de configuración para monitorizar los servicios del propio servidor Nagios.
+
+•localhost.cfg: Plantilla de configuración para monitorizar los servicios del propio servidor Nagios.
 • hypervisor.cfg: Plantilla de configuración para monitorizar los servicios de las plataformas de virtualización.
 • linux.cfg: Plantilla de configuración para monitorizar los servicios de los hosts Linux.
 • windows.cfg: Plantilla de configuración para monitorizar los servicios de los hosts Windows.
