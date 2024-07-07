@@ -100,6 +100,8 @@ Con este procedimiento ya deberiamos tener monitorizado el primer equipo windows
 
 ## Eliminar Docker Nagios
 
+cd nagios
+
 sudo docker-compose down
 
 sudo docker rmi  71c4992638a2 (poner Image ID: sudo docker image ls)
