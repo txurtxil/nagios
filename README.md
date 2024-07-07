@@ -16,15 +16,15 @@ editarlo y cambiar el usuario nagiosadmin por admin:
 
 sudo docker exec -it nagios_nagios_1 /bin/bash
 
-apk add nano
+            apk add nano
+            
+            nano etc/cgi.cfg
 
-nano etc/cgi.cfg
-
-Buscar en todo el docuemto nagiosadmin y cambiarlo por admin y salvarlo
+Buscar en todo el documento nagiosadmin y cambiarlo por admin y salvarlo
 
 Salir del docker y reinciar nagios
 
- sudo docker restart  nagios
+          sudo docker restart  nagios
 
 
 
