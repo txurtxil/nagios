@@ -1,5 +1,11 @@
 # Instalar Docker Nagios
-sudo docker-compose -p nagios up -d    (Nagios es el nombre que le damos al contenedor)
+
+   cd /opt
+
+   git clone https://github.com/txurtxil/nagios/
+   
+   sudo docker-compose -p nagios up -d    (nagios es el nombre que le damos al contenedor)
+   
 ## Parar contenedor Docker Nagios
  sudo docker-compose down
 ## Eliminar Docker Nagios
@@ -32,7 +38,7 @@ Hubicacion nagios:
 
 1.Instalar el agente en los hosts Windows a monitorizar, en nuestro caso instalaremos “NSClient++” 
 
-    (Generic,COmplete y activar las casillas Enable check plugins, Enable nsclient server, Enable NRPE server y insecure legacy)
+    (1.Generic,2.Complete 3. IP equipo a monitorizar y activar las casillas Enable check plugins, Enable nsclient server, Enable NRPE server y insecure legacy)
 
 2. Editamos el fichero de configuración de nagios:
 
@@ -68,6 +74,18 @@ En la definición del comando para “check_nt” es donde se situa la comunicac
 command_line $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s YPg7gMkLOOne49PB -v $ARG1$ $ARG2$
 
 Con este procedimiento ya deberiamos tener monitorizado el primer equipo windows
+
+## Comandos utiles para tranajar ocn el doquer nagios
+### Reiniciar Ngios para aplicar cambios: 
+
+     sudo docker restart  nagios
+
+### Entrar en la Shell del volumen Nagios para poder trabajar con los ficheros de configuracion Nagios
+
+    sudo docker exec -it nagios /bin/bash
+
+
+   
 
 
  
