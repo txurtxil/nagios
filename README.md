@@ -37,4 +37,20 @@ Hubicacion nagios:
 2. Editamos el fichero de configuración de nagios:
 
     nano /etc/nagios/nagios.cfg
+
+3. Creamos una carpeta donde alojaremos el fichero .cfg de maquina a monitorzar
+
+   mkdir /opt/nagios/etc/objects/equipos
+   cd /opt/nagios/etc/objects/equipos
+
+4. copiamos la plantilla  el fichero /opt/nagios/etc/objects/windows.cfg del equipo a minitorizar:
+    cp /opt/nagios/etc/objects/windows.cfg /opt/nagios/etc/objects/equipos/win01.cfg
+
+5.Editamos el fichero de configuración de nagios:
+
+    nano /etc/nagios/nagios.cfg
+    
+Añadimos la línea que especifica el fichero de configuración el equipo windows que vamos a monitorizar
+debajo de la seccion "Definitions for monitoring a Windows machine":
+        cfg_file=/opt/nagios/etc/objects/equipos/win01.cfg
  
