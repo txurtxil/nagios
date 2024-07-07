@@ -32,9 +32,9 @@
 
 # Monitorizar Servidor Windows en Nagios
 
-1.Instalar el agente en los hosts Windows a monitorizar, en nuestro caso instalaremos “NSClient++” 
+1.Instalar el agente en los hosts Windows a monitorizar, en nuestro caso instalaremos “NSClient++”  x64 a descargar free desde su web:
 
-    (1.Generic,2.Complete 3. IP equipo a monitorizar y activar las casillas Enable check plugins, Enable nsclient server, Enable NRPE server y insecure legacy)
+    1.Generic,2.Complete 3. IP equipo a monitorizar y activar: Enable check plugins, Enable nsclient server, Enable NRPE server,insecure legacy
 
 2. Editamos el fichero de configuración de nagios:
 
