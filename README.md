@@ -44,6 +44,7 @@ Hubicacion nagios:
    cd /opt/nagios/etc/objects/equipos
 
 4. copiamos la plantilla  el fichero /opt/nagios/etc/objects/windows.cfg del equipo a minitorizar:
+   
     cp /opt/nagios/etc/objects/windows.cfg /opt/nagios/etc/objects/equipos/win01.cfg
    
    Lo editamos y en  el apartado "define host" poner la direccion IP del equipo a monitorizar
@@ -65,6 +66,8 @@ En la definición del comando para “check_nt” es donde se situa la comunicac
 , comentamos el que viene por defecto y agregamos el siguiente:
 
 command_line $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s YPg7gMkLOOne49PB -v $ARG1$ $ARG2$
+
+Con este procedimiento ya deberiamos tener monitorizado el primer equipo windows
 
 
  
