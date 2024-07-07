@@ -12,7 +12,7 @@
 
     sudo docker exec -it nagios /bin/bash
 
-Hubicacion nagios:
+Ubicacion nagios:
 
 /opt/nagios
 
@@ -20,15 +20,15 @@ Hubicacion nagios:
 
 /opt/nagios/etc ----> Ficheros configuracion
 
-•localhost.cfg: Plantilla de configuración para monitorizar los servicios del propio servidor Nagios.
+         •localhost.cfg: Plantilla de configuración para monitorizar los servicios del propio servidor Nagios.
 
-• hypervisor.cfg: Plantilla de configuración para monitorizar los servicios de las plataformas de virtualización.
+         • hypervisor.cfg: Plantilla de configuración para monitorizar los servicios de las plataformas de virtualización.
 
-• linux.cfg: Plantilla de configuración para monitorizar los servicios de los hosts Linux.
+         • linux.cfg: Plantilla de configuración para monitorizar los servicios de los hosts Linux.
 
-• windows.cfg: Plantilla de configuración para monitorizar los servicios de los hosts Windows.
+         • windows.cfg: Plantilla de configuración para monitorizar los servicios de los hosts Windows.
 
-• netdev.cfg: Plantilla de configuración para monitorizar los servicios de los dispositivos de red.
+         • netdev.cfg: Plantilla de configuración para monitorizar los servicios de los dispositivos de red.
 
 # Monitorizar Servidor Windows en Nagios
 
