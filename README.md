@@ -10,7 +10,26 @@
 
    Con estos pasos tenemos nagios en la url http://<IP host>:9080 
                 user - pass: admin/nagios
-   
+
+Nota: en la web no vemos los equipos monitorizados (inicialmente solo localhost) es un error en el fichero  cgi.cfg
+editarlo y cambiar el usuario nagiosadmin por admin:
+
+sudo docker exec -it nagios_nagios_1 /bin/bash
+
+apk add nano
+
+nano etc/cgi.cfg
+
+Buscar en todo el docuemto nagiosadmin y cambiarlo por admin y salvarlo
+
+Salir del docker y reinciar nagios
+
+ sudo docker restart  nagios
+
+
+
+
+        
 # Configurar Nagios:
 
 ### Entrar en la Shell del volumen Nagios para poder trabajar con los ficheros de configuracion Nagios
@@ -79,13 +98,10 @@ Con este procedimiento ya deberiamos tener monitorizado el primer equipo windows
 
      sudo docker restart  nagios
 
-
-
-
-
-    ## Parar contenedor Docker Nagios
- sudo docker-compose down
 ## Eliminar Docker Nagios
+
+sudo docker-compose down
+
 sudo docker rmi  71c4992638a2 (poner Image ID: sudo docker image ls)
 
 
