@@ -8,7 +8,7 @@
    
    sudo docker-compose -p nagios up -d    (nagios es el nombre que le damos al contenedor)
 
-   Con estos pasos tenemos nagios en la url http://<IP host>:9080 
+   Con estos pasos tenemos nagios en la url http://IP_del_host:9080 
                 user - pass: admin/nagios
 
 Nota: en la web no vemos los equipos monitorizados (inicialmente solo localhost) es un error en el fichero  cgi.cfg
