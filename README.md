@@ -34,29 +34,28 @@
 
 1.Instalar el agente en los hosts Windows a monitorizar, en nuestro caso instalaremos “NSClient++”  x64 a descargar free desde su web:
 
-    1.Generic,2.Complete 3. IP equipo a monitorizar y activar: Enable check plugins, Enable nsclient server, Enable NRPE server,insecure legacy
+    1.Generic
+    2.Complete
+    3. IP equipo a monitorizar (copiamos la password) y activar: 
+       Enable check plugins, Enable nsclient server, Enable NRPE server,insecure legacy
 
-2. Editamos el fichero de configuración de nagios:
-
-    nano /etc/nagios/nagios.cfg
-
-3. Creamos una carpeta donde alojaremos el fichero .cfg de maquina a monitorzar
+2. Creamos una carpeta donde alojaremos el fichero .cfg de maquina a monitorzar
 
    mkdir /opt/nagios/etc/objects/equipos
    cd /opt/nagios/etc/objects/equipos
 
-4. copiamos la plantilla  el fichero /opt/nagios/etc/objects/windows.cfg del equipo a minitorizar:
+3. copiamos la plantilla  el fichero /opt/nagios/etc/objects/windows.cfg del equipo a minitorizar:
    
     cp /opt/nagios/etc/objects/windows.cfg /opt/nagios/etc/objects/equipos/win01.cfg
    
    Lo editamos y en  el apartado "define host" poner la direccion IP del equipo a monitorizar
 
-5.Editamos el fichero de configuración de nagios:
+4.Editamos el fichero de configuración de nagios:
 
     nano /etc/nagios/nagios.cfg
     
 Añadimos la línea que especifica el fichero de configuración el equipo windows que vamos a monitorizar
-debajo de la seccion "Definitions for monitoring a Windows machine":
+debajo de la seccion "Definitions for monitoring a Windows machine" y salvamos:
 
         cfg_file=/opt/nagios/etc/objects/equipos/win01.cfg
         
@@ -64,7 +63,7 @@ debajo de la seccion "Definitions for monitoring a Windows machine":
 
 nano /etc/nagios/objects/commands.cfg
 
-En la definición del comando para “check_nt” es donde se situa la comunicacion con el equipo y lleva la passwd generada dirante la instalacion de “NSClient++” 
+En la definición del comando para “check_nt” es donde se situa la comunicacion con el equipo y lleva la password generada durante la instalacion de “NSClient++” 
 , comentamos el que viene por defecto y agregamos el siguiente:
 
 command_line $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s YPg7gMkLOOne49PB -v $ARG1$ $ARG2$
