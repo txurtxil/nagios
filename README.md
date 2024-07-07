@@ -7,6 +7,9 @@
    cd nagios
    
    sudo docker-compose -p nagios up -d    (nagios es el nombre que le damos al contenedor)
+
+   Con estos pasos tenemos nagios en la url http://<IP host>:9080 
+                user - pass: admin/
    
 # Configurar Nagios:
 
