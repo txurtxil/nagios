@@ -59,7 +59,7 @@ Salir del docker y reinciar nagios
 
 # Monitorizar Servidor Windows en Nagios
 
-1.Instalar el agente en los hosts Windows a monitorizar, en nuestro caso instalaremos “NSClient++”  x64 a descargar free desde su web:
+1.Instalar el agente en los hosts Windows a monitorizar, en nuestro caso instalaremos “NSClient++”  x64,   a descargar free desde su web:
 
              1.Generic
              2.Complete
