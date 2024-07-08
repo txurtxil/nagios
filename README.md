@@ -87,8 +87,7 @@ debajo de la seccion "Definitions for monitoring a Windows machine" y salvamos:
         
 6.Editamos el fichero donde se definen los comandos para nagios:
 
-nano /opt/nagios/etc/objects/commands.cfg
-
+         nano /opt/nagios/etc/objects/commands.cfg
 
 En la definición del comando para “check_nt” es donde se situa la comunicacion con el equipo y lleva la password generada durante la instalacion de “NSClient++” 
 , comentamos el que viene por defecto y agregamos el siguiente:
