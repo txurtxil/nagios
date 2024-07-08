@@ -65,6 +65,7 @@ Salir del docker y reinciar nagios
              2.Complete
              3. IP equipo a monitorizar (copiamos la password) y activar: 
                 Enable check plugins, Enable nsclient server, Enable NRPE server,insecure legacy
+             4. Hay que editar el fichero C:\Program Files\NSClient++\nsclient.ini y poner "enabled" los checks 
 
 2. Creamos una carpeta donde alojaremos el fichero .cfg de maquina a monitorzar
 
@@ -93,7 +94,7 @@ debajo de la seccion "Definitions for monitoring a Windows machine" y salvamos:
 En la definición del comando para “check_nt” es donde se situa la comunicacion con el equipo y lleva la password generada durante la instalacion de “NSClient++” 
 , comentamos el que viene por defecto y agregamos el siguiente:
 
-command_line $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s YPg7gMkLOOne49PB -v $ARG1$ $ARG2$
+        command_line $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s YPg7gMkLOOne49PB -v $ARG1$ $ARG2$
 
 Con este procedimiento, despues de reiniciar Nagios,  ya deberiamos tener monitorizado el primer equipo windows
 
