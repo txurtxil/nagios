@@ -1,4 +1,4 @@
-# Instalar Docker Nagios
+# Instalar Docker Nagios, esta version Vale para X32, x64, ARM (Raspberry Pi)
 
    cd /opt
 
