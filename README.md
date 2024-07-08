@@ -89,12 +89,13 @@ debajo de la seccion "Definitions for monitoring a Windows machine" y salvamos:
 
 nano /opt/nagios/etc/objects/commands.cfg
 
+
 En la definición del comando para “check_nt” es donde se situa la comunicacion con el equipo y lleva la password generada durante la instalacion de “NSClient++” 
 , comentamos el que viene por defecto y agregamos el siguiente:
 
 command_line $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s YPg7gMkLOOne49PB -v $ARG1$ $ARG2$
 
-Con este procedimiento ya deberiamos tener monitorizado el primer equipo windows
+Con este procedimiento, despues de reiniciar Nagios,  ya deberiamos tener monitorizado el primer equipo windows
 
 ## Comandos utiles para tranajar con el docker nagios
 ### Reiniciar Nagios para aplicar cambios (desde el equipo host): 
