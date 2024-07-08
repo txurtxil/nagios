@@ -37,7 +37,7 @@ Salir del docker y reinciar nagios
 
 ### Entrar en la Shell del volumen Nagios para poder trabajar con los ficheros de configuracion Nagios
 
-    sudo docker exec -it nagios /bin/bash
+    sudo docker exec -it nagios_nagios_1 /bin/bash
 
       Ubicacion nagios:
       
