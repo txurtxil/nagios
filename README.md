@@ -74,7 +74,8 @@ Salir del docker y reinciar nagios
    
     cp /opt/nagios/etc/objects/windows.cfg /opt/nagios/etc/objects/equipos/win01.cfg
    
-  Editamos el nuevo fichero win01.cfg y en  el apartado "define host" poner la direccion IP del equipo a monitorizar
+  Editamos el nuevo fichero win01.cfg y en  el apartado "define host" poner la direccion IP del equipo a monitorizar y sustituimos en todo el documeto la definicion que biene de serie en host_name (winserver) por el nombre que que damos a lequipo
+  a monitorizar.
 
 4.Editamos el fichero de configuración de nagios:
 
